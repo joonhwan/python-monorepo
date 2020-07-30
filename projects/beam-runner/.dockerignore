@@ -1,0 +1,10 @@
+README.*
+*.egg-info
+Makefile*
+
+.venv/
+__pycache__/
+tests/
+dist/
+sdist/
+

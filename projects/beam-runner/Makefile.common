@@ -1,0 +1,14 @@
+
+_run_local/%:
+	python -m src  \
+		--job_name ${JOB_NAME} \
+		--project ${PROJECT} \
+		--runner DataflowRunner \
+		--save_main_session \
+		--region asia-northeast1 \
+		--machine_type n1-standard-2 \
+		--disk_size_gb 250 \
+		--setup_file $(abspath ./setup.py) \
+		--staging_location ${STAGING_LOCATION} \
+		--temp_location    ${TEMP_LOCATION} \
+		--service_account_email ${SERVICE_ACCOUNT_EMAIL} \

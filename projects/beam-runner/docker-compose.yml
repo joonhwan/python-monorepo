@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  beam_runner:
+    build:
+      context: ../../
+      dockerfile: ./projects/beam-runner/Dockerfile

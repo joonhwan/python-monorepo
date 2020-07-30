@@ -1,13 +1,20 @@
 [tool.poetry]
-name = "lib-one"
+name = "beam-runner"
 version = "0.1.0"
 description = ""
 authors = ["ya-mori <ppap.yohei.moriya@gmail.com>"]
+#packages = [
+#    { include = "beam_runner" },
+##    { include = "libs/logger" },
+#]
+#include = [
+#    "libs/logger",
+#]
 
 [tool.poetry.dependencies]
 python = "^3.7"
-logger = {path = "../logger"}
-numpy = "^1.19.1"
+apache-beam = {extras = ["gcp"], version = "^2.23.0"}
+lib-one = {path = "../../libs/lib-one"}
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
