@@ -15,7 +15,7 @@ def run():
         collection = p | beam.Create(['A', 'B', 'C'])
 
         (collection
-         | beam.Fillter(lambda x: x == "A")
+         | beam.Filter(lambda x: x == "A")
          | beam.Map(lambda x: print(x))
          )
 
